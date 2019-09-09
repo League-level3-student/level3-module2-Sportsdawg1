@@ -19,18 +19,23 @@ public class HeapSorter extends Sorter {
 		//9. make a for loop that starts half way between
 		//   0 and n and counts down until it is less than 0.
 		//   Inside this for loop, call the heapSort method with n and i
-        for (int i = n-1; i >= 0; i--) {
-        //10. make a for loop that starts at n-1 
-        //    and counts down until it is less than 0.
+        for (int i = (0+n)/2; i >= 0; i--) {
+			heapSort(array, n, i, display);
+        }	
         
+        for (int i = n-1; i >= 0; i--) {
+	    //10. make a for loop that starts at n-1 
+	    //    and counts down until it is less than 0.
+	        
         	//11. swap the array elements at 0 and i.
-        	int hold = array[0];
-        	array[0] = array[i];
-        	array[i] = hold;
-            //12. call the heapSort method with i and 0
-        	heapSort(array, i, 0, display);
-        }
-	}
+	        int hold = array[0];
+	        array[0] = array[i];
+	        array[i] = hold;
+	        //12. call the heapSort method with i and 0
+	        heapSort(array, i, 0, display);
+	    }
+    }
+	
 	
 	public void heapSort(int[] array, int n, int i, SortingVisualizer display) {
 		//2. create an integer called largest and set it equal to i
