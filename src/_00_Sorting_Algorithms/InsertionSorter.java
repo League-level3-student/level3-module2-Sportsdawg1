@@ -18,6 +18,7 @@ public class InsertionSorter extends Sorter {
 					int hold = array[j-1];
 					array[j-1] = array[j];
 					array[j] = hold;
+					display.updateDisplay();
 				}
 			}
 		}
