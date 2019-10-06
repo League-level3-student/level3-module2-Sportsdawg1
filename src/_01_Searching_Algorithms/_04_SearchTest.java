@@ -31,18 +31,24 @@ class _04_SearchTest {
 	public void testInterpolationSearch() {
 		//3. use the assertEquals method to test your interpolation search method.
 		//   remember that the array must be sorted and evenly distributed
-	//	int[] numbers = {7,14,21,28,35,42,49,56,63,70,77,84,91,98};
-		int[] numbers = {2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40};
-		//assertEquals(2,_02_InterpolationSearch.interpolationSearch(numbers, 21));
-		//assertEquals(8,_02_InterpolationSearch.interpolationSearch(numbers, 63));
+	    //int[] numbers = {7,14,21,28,35,42,49,56,63,70,77,84,91,98};
+		//int[] numbers = {2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40};
+		int[] numbers = {0,1,2,3,4};
+		assertEquals(0,_02_InterpolationSearch.interpolationSearch(numbers, 0));
+		assertEquals(4,_02_InterpolationSearch.interpolationSearch(numbers, 4));
 		//assertEquals(13,_02_InterpolationSearch.interpolationSearch(numbers, 98));
 		//assertEquals(0,_02_InterpolationSearch.interpolationSearch(numbers, 7));
-		assertEquals(19,_02_InterpolationSearch.interpolationSearch(numbers, 40));
+		//assertEquals(19,_02_InterpolationSearch.interpolationSearch(numbers, 40));
 	}
 	
 	@Test
 	public void testExponentialSearch() {
 		//4. use the assertEquals method to test your exponential search method.
 		//   remember that the array must be sorted
+		int[] numbers = {1,3,4,5,7,8,12,19,20,21,22,30};
+		assertEquals(5, _03_ExponentialSearch.exponentialSearch(numbers, 8));
+		assertEquals(3, _03_ExponentialSearch.exponentialSearch(numbers, 5));
+		assertEquals(10, _03_ExponentialSearch.exponentialSearch(numbers, 22));
 	}
 }
+

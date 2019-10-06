@@ -23,7 +23,8 @@ public class _02_InterpolationSearch {
         //   start is less than or equal to end
         //   value is greater than or equal to the array element at start
         //   value is less than or equal to the array element at end
-			int position = start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
+			int position;
+			position = start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
 			//4. create an integer called position
         	//  initialize it to the following:
         	//  start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
